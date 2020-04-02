@@ -12,7 +12,7 @@ $(function() {
 
         $.ajax("/api/burgers", {
             type: "POST",
-            data: newburger
+            data: newBurger
         }).then(function() {
             console.log("Added new burger");
             location.reload();

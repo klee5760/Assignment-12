@@ -1,42 +1,43 @@
 <div class="container">
 
-    <div class = "jumbotron">
+    <div class="jumbotron">
         <h1>Order Your Burger</h1>
         <p>Burger Orders for Pickup</p>
         <br>
         <h2>Select your favorite Burger!</h2>
-        <panel><form class = "create-form">
-            <div class = "form-group">
-                <label for = "newburger">Order Here!</label>
+        <panel>
+            <form class="create-form">
+                <div class="form-group">
+                    <label for="newburger">Order Here!</label>
 
-                <select data-placeholder = "" id"newburger" name="burger">
-                    <option value="Nothing Selected" selected>Please Select a Sandwich</option>
+                    <select data-placeholder="" id"newburger" name="burger">
+                        <option value="Nothing Selected" selected>Please Select a Sandwich</option>
                         <option value="BigMac">Big Mac</option>
                         <option value="Whopper">Whopper</option>
                         <option value="DoubleDouble">Double Double (double meat and cheese)</option>
                         <option value="KatsuBurger">Katsu Burger</option>
                         <option value="ChickenBurger">Chicken Burger</option>
-                        
-                </select>
 
-                <button type = "submit" class="btn btn-success" id="addburger">
-                    <span class = "fa fa-plus"></span>
-                </button>          
-            </div>
-        </form>
+                    </select>
+
+                    <button type="submit" class="btn btn-success" id="addburger">
+                        <span class="fa fa-plus"></span>
+                    </button>
+                </div>
+            </form>
         </panel>
     </div>
 
-    <div class = "row">
-        <div class = "col-sm-6">
-            <div class = "panel panel-default">
-                <div class = "panel-heading" id = "leftside"><Strong>Order your Burger</Strong>
-                <p> Send your order to cashier when ready for pick up</p>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading" id="leftside"><Strong>Order your Burger</Strong>
+                    <p> Send your order to cashier when ready for pick up</p>
                 </div>
-                <div class = "panel-body">
+                <div class="panel-body">
 
                     <ul>
-                           {{#each burgers}}
+                        {{#each burgers}}
                         {{#unless devoured}}
 
                         <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
@@ -49,15 +50,15 @@
                 </div>
             </div>
         </div>
- <div class = "col-sm-6">
-            <div class = "panel panel-default">
-                <div class = "panel-heading" id = "rightside"><Strong>Order your Burger</Strong>
-                <p> Send your order to cashier when ready for pick up</p>
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading" id="rightside"><Strong>Order your Burger</Strong>
+                    <p> Send your order to cashier when ready for pick up</p>
                 </div>
-                <div class = "panel-body">
+                <div class="panel-body">
 
                     <ul>
-                           {{#each burgers}}
+                        {{#each burgers}}
                         {{#if devoured}}
 
                         <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
@@ -69,8 +70,8 @@
                     </ul>
 
 
-         </div>
+                </div>
             </div>
         </div>
- </div>
-        </div>
+    </div>
+</div>
